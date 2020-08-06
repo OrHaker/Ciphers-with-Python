@@ -4,7 +4,7 @@ import os.path
 import random
 
 # Practice python logic by writing ciphers
-exception_message = "An exception occurred  "
+EXCEPTION_MESSAGE = "An exception occurred  "
 
 
 def brute_force_attack(string):
@@ -22,7 +22,7 @@ def brute_force_attack(string):
         print(string_to_return)
         return string_to_return
     except Exception as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 
 def route_encrypt(text, key):
@@ -61,7 +61,7 @@ def route_encrypt(text, key):
         print(text_to_return)
         return text_to_return
     except (ValueError, IndexError, Exception) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 
 def route_decrypt(text, key):
@@ -100,7 +100,7 @@ def route_decrypt(text, key):
                 str_to_return += matrix[i][j]
         return str_to_return.strip('X')
     except (ValueError, IndexError, Exception) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 # one time pad  cipher
 
@@ -153,7 +153,7 @@ def atbash_cipher(s):
                 new_s += l
         return new_s
     except (ValueError, IndexError) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 
 def rot13_cipher(s):
@@ -185,7 +185,7 @@ def rot13_cipher(s):
                 new_s += l
         return new_s
     except (ValueError, IndexError) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 
 def rail_fence_encrypt(string, key):
@@ -209,7 +209,7 @@ def rail_fence_encrypt(string, key):
                     str_to_return += arr_of_words[i][j]
         return str_to_return
     except (ValueError, IndexError) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 
 def rail_fence_decrypt(string, key):
@@ -255,7 +255,7 @@ def caesar_cipher_encrept(string, key):
                 string_to_return += chr(ord(l.upper())+key)
         return string_to_return
     except (ValueError, IndexError, Exception) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
 
 
 def caesar_cipher_decrept(string, key):
@@ -271,4 +271,4 @@ def caesar_cipher_decrept(string, key):
                 string_to_return += chr(ord(l.upper())-key)
         return string_to_return
     except (ValueError, IndexError, Exception) as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
