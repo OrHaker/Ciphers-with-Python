@@ -116,7 +116,7 @@ def one_time_pad_decrypt():
         keys = key_file.read().split(',')
         return "".join([chr(ord(text[i]) ^ int(keys[i])) for i in range(len(text))])
     except Exception as ex:
-        print(exception_message, ex)
+        print(EXCEPTION_MESSAGE, ex)
     finally:
         if txt_file != None:
             txt_file.close()
